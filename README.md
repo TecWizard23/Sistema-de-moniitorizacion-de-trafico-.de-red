@@ -6,7 +6,7 @@ Dashboard interactivo para monitorear la salud de la red y dispositivos conectad
 ![Node.js](https://img.shields.io/badge/Node.js-18%2B-green)
 ![React](https://img.shields.io/badge/React-18.3-blue)
 
-## 📋 Características
+## Características
 
 - **Monitoreo en Tiempo Real**: Panel de control con métricas actualizadas constantemente
 - **Métricas del Sistema**:
@@ -20,7 +20,7 @@ Dashboard interactivo para monitorear la salud de la red y dispositivos conectad
 - **Panel de Actividad Viva**: Registro de eventos de red en tiempo real
 - **Interfaz Responsiva**: Diseño adaptable con Tailwind CSS
 
-## 🔧 Requisitos Previos
+## Requisitos Previos
 
 - **Windows 10/11** o superior
 - **Node.js** 18+ ([descargar](https://nodejs.org))
@@ -33,7 +33,7 @@ Dashboard interactivo para monitorear la salud de la red y dispositivos conectad
 2. Ejecuta el instalador (`.msi`)
 3. Verifica que responda en: `http://localhost:9182/metrics`
 
-## 📦 Instalación
+## Instalación
 
 ### 1. Clonar el repositorio
 
@@ -74,7 +74,7 @@ npm run dev
 - **Prometheus**: `http://localhost:9090` (si usas Docker)
 - **Windows Exporter**: `http://localhost:9182/metrics`
 
-## 📂 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 Proyecto-redes/
@@ -106,7 +106,7 @@ Proyecto-redes/
 └── postcss.config.js
 ```
 
-## 🚀 Scripts Disponibles
+## Scripts Disponibles
 
 ```bash
 # Inicia frontend y backend simultáneamente
@@ -125,7 +125,7 @@ npm run build
 npm run preview
 ```
 
-## 🔌 Variables de Entorno
+## Variables de Entorno
 
 Puedes personalizar la configuración mediante variables de entorno:
 
@@ -137,7 +137,7 @@ VITE_PROMETHEUS_PLATFORM=windows
 
 > **Nota para Windows**: Cuando Prometheus corre en Docker, usa `host.docker.internal:9182` en lugar de `localhost:9182` para conectarse a windows_exporter.
 
-## 📊 Métricas Monitoreadas
+## Métricas Monitoreadas
 
 El dashboard utiliza las siguientes métricas de Prometheus:
 
@@ -149,7 +149,7 @@ El dashboard utiliza las siguientes métricas de Prometheus:
 | `windows_net_bytes_total`             | Bytes totales de red      |
 | `windows_net_current_bandwidth_bytes` | Ancho de banda actual     |
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 - **Frontend**:
   - React 18.3
@@ -165,7 +165,7 @@ El dashboard utiliza las siguientes métricas de Prometheus:
   - Prometheus
   - Windows Exporter
 
-## ⚙️ Configuración de Prometheus
+## Configuración de Prometheus
 
 El archivo `docker-compose.yml` contiene la configuración para Prometheus. Para máquinas Windows, asegúrate de que el archivo `prometheus.windows.example.yml` tenga la configuración correcta:
 
@@ -176,7 +176,7 @@ scrape_configs:
       - targets: ["host.docker.internal:9182"]
 ```
 
-## 🐛 Solución de Problemas
+## Solución de Problemas
 
 ### El dashboard no conecta con Prometheus
 
@@ -197,24 +197,6 @@ En Windows, el WebSocket podría tener problemas. Soluciones:
 - Ejecuta el backend sin `--reload`
 - Conecta WS directo al puerto 7777
 - Reinicia Docker Desktop
-
-## 📝 Licencia
-
-Este proyecto está bajo la licencia MIT. Ver `LICENSE` para más detalles.
-
-## 🤝 Contribuciones
-
-Las contribuciones son bienvenidas. Por favor:
-
-1. Fork el repositorio
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
-
-## 📧 Contacto
-
-Para preguntas o sugerencias, abre un issue en el repositorio.
 
 ---
 
