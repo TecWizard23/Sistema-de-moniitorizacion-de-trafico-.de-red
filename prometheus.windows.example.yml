@@ -1,0 +1,12 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: windows
+    static_configs:
+      - targets:
+          - host.docker.internal:9182
+
+  # Si ejecutas Prometheus directamente en Windows fuera de Docker,
+  # puedes cambiar el target a localhost:9182.
