@@ -1,6 +1,7 @@
 const DEFAULT_PROMETHEUS_BASE_URL = import.meta.env.VITE_PROMETHEUS_BASE_URL || '/prometheus';
 const DEFAULT_RANGE_STEP = import.meta.env.VITE_PROMETHEUS_RANGE_STEP || '30s';
 
+//Al fin funciono esta wea, no se que hice pero ya jalo, creo que era el url del prometheus, lo deje como /prometheus y ya jalo, antes lo tenia con la ip y el puerto y no jalaba, pero ahora si, ya puedo hacer consultas a prometheus desde mi app
 function getPrometheusBaseUrl() {
   return String(DEFAULT_PROMETHEUS_BASE_URL).replace(/\/$/, '');
 }
